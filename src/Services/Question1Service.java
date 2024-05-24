@@ -11,8 +11,6 @@ public class Question1Service {
     Map<String, Integer> res = new LinkedHashMap<>();
 
     for(String c: Arrays.stream(text.replaceAll("\\s+", "").split("")).map(String::toLowerCase).toList()){
-      c = c.toLowerCase();
-
       if(res.containsKey(c)){
         res.put(c, res.get(c) + 1);
       }else{
